@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "14485262054",
+    "project_id": "sanket-9dd56",
+    "storage_bucket": "sanket-9dd56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14485262054:android:4bc5440990d253a1037527",
+        "android_client_info": {
+          "package_name": "com.example.scholarship_vjti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "14485262054-d515huof4khht2gfujn51fuq314adv8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwp_fwKL8IGJ7jl1z2Se3r0HzFgGIcVVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "14485262054-d515huof4khht2gfujn51fuq314adv8f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
