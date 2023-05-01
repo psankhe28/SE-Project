@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>VJTI Scholarship Admin</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="vendors/typicons.font/font/typicons.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/vertical-layout-light/style.css" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <style>
+        table,
+        th,
+        td {
+          border: 2.5px solid black !important;
+        }
+        .labs {
+          display: inline-block;
+          width: 100px;
+        }
+      </style>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.html" style="font-size:18px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VJTI Scholarship</a>
+          <a class="navbar-brand brand-logo-mini" href="index.html">VJTI</a>
+          <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex" type="button" data-toggle="minimize">
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+        <div
+          class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+        >
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a
+                class="nav-link dropdown-toggle pl-0 pr-0"
+                href="#"
+                data-toggle="dropdown"
+                id="profileDropdown"
+              >
+                <i class="typcn typcn-user-outline mr-0"></i>
+                <span class="nav-profile-name">Scholarship Admin</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="profileDropdown"
+              >
+                <a class="dropdown-item">
+                  <i class="typcn typcn-power text-primary"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+          <div id="settings-trigger">
+            <i class="typcn typcn-cog-outline"></i>
+          </div>
+          <div id="theme-settings" class="settings-panel">
+            <i class="settings-close typcn typcn-delete-outline"></i>
+            <p class="settings-heading">SIDEBAR SKINS</p>
+            <div class="sidebar-bg-options" id="sidebar-light-theme">
+              <div class="img-ss rounded-circle bg-light border mr-3"></div>
+              Light
+            </div>
+            <div class="sidebar-bg-options selected" id="sidebar-dark-theme">
+              <div class="img-ss rounded-circle bg-dark border mr-3"></div>
+              Dark
+            </div>
+            <p class="settings-heading mt-2">HEADER SKINS</p>
+            <div class="color-tiles mx-0 px-4">
+              <div class="tiles success"></div>
+              <div class="tiles warning"></div>
+              <div class="tiles danger"></div>
+              <div class="tiles primary"></div>
+              <div class="tiles info"></div>
+              <div class="tiles dark"></div>
+              <div class="tiles default border"></div>
+            </div>
+          </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item mt-5 my-3">
+              <a class="nav-link" href="index.html">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title">Dashboard <span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="addstudent.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Add Students</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="viewstudent.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">View Students</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="addscho.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Add Scholarships</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="viewscho.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">View Scholarships</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="indscho.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Individual Scholarship</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="notification.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Notifications</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="uploadDocument.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Upload Document</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="nodues.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">No Dues</span>
+              </a>
+            </li>
+            <!--
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                <i class="typcn typcn-film menu-icon"></i>
+                <span class="menu-title">Form elements</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Charts</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                <i class="typcn typcn-th-small-outline menu-icon"></i>
+                <span class="menu-title">Tables</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="tables">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                <i class="typcn typcn-compass menu-icon"></i>
+                <span class="menu-title">Icons</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="icons">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <i class="typcn typcn-user-add-outline menu-icon"></i>
+                <span class="menu-title">User Pages</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+                <i class="typcn typcn-globe-outline menu-icon"></i>
+                <span class="menu-title">Error pages</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="error">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/documentation/documentation.html">
+                <i class="typcn typcn-document-text menu-icon"></i>
+                <span class="menu-title">Documentation</span>
+              </a>
+            </li>
+            -->
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="col-12 grid-margin">
+                <div class="container mt-3">
+                    <!-- Search Section -->
+                    <div class="input-group mb-3">
+                      <input
+                        id="SearchBar"
+                        type="text"
+                        class="form-control mr-3"
+                        placeholder="Search a scholarship"
+                        aria-label="Recipient's username"
+                        aria-describedby="basic-addon2"
+                      />
+                      <div class="input-group-append" class="form-control mr-3 mt-6" >
+                        <select class="custom-select mr-3 mt-6" id="CategorySelected" >
+                          <option selected value="1">Name</option>
+                          <option value="2">Type</option>
+                          <option value="3">Category</option>
+                        </select>
+              
+                       
+                      </div>
+                      <button
+                      id="SearchBtn"
+                      class="btn btn-outline-primary ml-1"
+                      type="button"
+                    >
+                      Search
+                    </button>
+                    </div>
+              
+                    <table class="table table-bordered">
+                      <thead>
+                        <th>Sno</th>
+                        <th>Name of the Scholarship</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Income</th>
+                        <th>Link</th>
+                      </thead>
+                      <tbody id="tbody1"></tbody>
+                    </table>
+                  </div>
+            </div>
+          </div>
+          <!-- partial -->
+        </div>
+      </div>
+    </div>
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="js/dashboard.js"></script>
+    <script type="module">
+        // Filling the table
+        var stdNo = 0;
+        var schList = [];
+        var tbody = document.getElementById("tbody1");
+        function AddItemToTable(name, type, cat, inc, link) {
+          let trow = document.createElement("tr");
+          let td1 = document.createElement("td"); // to create cells
+          let td2 = document.createElement("td");
+          let td3 = document.createElement("td");
+          let td4 = document.createElement("td");
+          let td5 = document.createElement("td");
+          let td6 = document.createElement("td");
+  
+          schList.push([name, type, cat, inc, link]);
+          console.log(schList);
+  
+          td1.innerHTML = ++stdNo;
+          td2.innerHTML = name;
+          td3.innerHTML = type;
+          td4.innerHTML = cat;
+          td5.innerHTML = inc;
+          td6.innerHTML = link;
+  
+          td1.classList += "nameField";
+          td2.classList += "typeField";
+          td3.classList += "catField";
+          td4.classList += "incField";
+  
+          trow.appendChild(td1);
+          trow.appendChild(td2);
+          trow.appendChild(td3);
+          trow.appendChild(td4);
+          trow.appendChild(td5);
+          trow.appendChild(td6);
+  
+          tbody.appendChild(trow);
+        }
+  
+        function AddAllItemsToTable(TheStudent) {
+          stdNo = 0;
+          tbody.innerHTML = "";
+          TheStudent.forEach((element) => {
+            AddItemToTable(
+              element.name,
+              element.type,
+              element.category,
+              element.income,
+              element.link
+            );
+          });
+        }
+  
+        // Imports and Configuration
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyBOhM_28cm1q1nKJEneftxSZUdCkpiRnyg",
+          authDomain: "sanket-9dd56.firebaseapp.com",
+          databaseURL: "https://sanket-9dd56-default-rtdb.firebaseio.com",
+          projectId: "sanket-9dd56",
+          storageBucket: "sanket-9dd56.appspot.com",
+          messagingSenderId: "14485262054",
+          appId: "1:14485262054:web:0c3e0af65ee9699b037527",
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+  
+        import {
+          getFirestore,
+          doc,
+          getDoc,
+          getDocs,
+          onSnapshot,
+          collection,
+        } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js";
+  
+        const db = getFirestore();
+  
+        // Get alll data
+        async function GetAllDataOnce() {
+          const querySnapshot = await getDocs(collection(db, "mySchemes"));
+  
+          var scholarships = [];
+          querySnapshot.forEach((doc) => {
+            scholarships.push(doc.data());
+          });
+  
+          AddAllItemsToTable(scholarships);
+        }
+  
+        window.onload = GetAllDataOnce;
+  
+        // Selection of All data
+        function Select_AllData() {
+          document.getElementById(("tbody1".innerHTML = ""));
+          schNo = 0;
+          firebase
+            .database()
+            .ref("student")
+            .once("value", function (snapshot) {
+              var name = childSnapshot.val().name();
+              var type = childSnapshot.val().type();
+              var category = childSnapshot.val().category();
+              var income = childSnapshot.val().income();
+              var link = childSnapshot.val().link();
+            });
+        }
+  
+        var ModName = document.getElementById("NameMod");
+        var ModType = document.getElementById("TypeMod");
+        var ModCat = document.getElementById("CatMod");
+        var ModInc = document.getElementById("IncMod");
+        var ModLink = document.getElementById("LinkMod");
+  
+        var SearchBar = document.getElementById("SearchBar");
+        var searchBtn = document.getElementById("SearchBtn");
+        var category = document.getElementById("CategorySelected");
+        var tbody = document.getElementById("tbody1");
+  
+        function SearchTable(Category) {
+          var filter = SearchBar.value.toUpperCase();
+          console.log(filter);
+          var tr = tbody.getElementsByTagName("tr");
+          var found;
+          console.log(tr.length);
+          for (let i = 0; i < tr.length; i++) {
+            var td = tr[i].getElementsByClassName(Category);
+            console.log(td.length);
+            for (let j = 0; j < td.length; j++) {
+              console.log(td[j].innerHTML);
+              if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+              }
+            }
+            if (found) {
+              tr[i].style.display = "";
+              found = false;
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+  
+        function SearchTableByExactValues(Category) {
+          var filter = SearchBar.value.toUpperCase();
+          var tr = tbody.getElementsByTagName("tr");
+          var found;
+  
+          for (let i = 0; i < tr.length; i++) {
+            var td = tr[i].getElementsByClassName(Category);
+            for (let j = 0; i < td.length; j++) {
+              console.log(td[j].innerHTML);
+              if (td[j].innerHTML.toUpperCase() == filter) {
+                found = true;
+              }
+            }
+            if (found) {
+              tr[i].style.display = "";
+              found = false;
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+  
+        searchBtn.onclick = function () {
+          if (SearchBar.value == "") {
+            SearchTable("nameField");
+          } else if (category.value == 1) {
+            SearchTable("typeField");
+          } else if (category.value == 2) {
+            SearchTable("catField");
+          } else if (category.value == 3) {
+            SearchTable("incField");
+          }
+        };
+  
+        SearchBar.onkeypress = function (event) {
+          if (event.keyCode == 13) {
+            searchBtn.click();
+          }
+        };
+      </script>
+ </body>
+</html>

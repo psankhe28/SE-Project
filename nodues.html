@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>VJTI Scholarship Admin</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="vendors/typicons.font/font/typicons.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/vertical-layout-light/style.css" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <style>
+        table,
+        th,
+        td {
+          border: 2.5px solid black !important;
+        }
+        .labs {
+          display: inline-block;
+          width: 100px;
+        }
+          input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    /* Firefox */
+    input[type=number] {
+      appearance: textfield;
+      -moz-appearance: textfield;
+    }
+    
+      </style>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.html" style="font-size:18px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VJTI Scholarship</a>
+          <a class="navbar-brand brand-logo-mini" href="index.html">VJTI</a>
+          <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex" type="button" data-toggle="minimize">
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+        <div
+          class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+        >
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a
+                class="nav-link dropdown-toggle pl-0 pr-0"
+                href="#"
+                data-toggle="dropdown"
+                id="profileDropdown"
+              >
+                <i class="typcn typcn-user-outline mr-0"></i>
+                <span class="nav-profile-name">Scholarship Admin</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="profileDropdown"
+              >
+                <a class="dropdown-item">
+                  <i class="typcn typcn-power text-primary"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+          <div id="settings-trigger">
+            <i class="typcn typcn-cog-outline"></i>
+          </div>
+          <div id="theme-settings" class="settings-panel">
+            <i class="settings-close typcn typcn-delete-outline"></i>
+            <p class="settings-heading">SIDEBAR SKINS</p>
+            <div class="sidebar-bg-options" id="sidebar-light-theme">
+              <div class="img-ss rounded-circle bg-light border mr-3"></div>
+              Light
+            </div>
+            <div class="sidebar-bg-options selected" id="sidebar-dark-theme">
+              <div class="img-ss rounded-circle bg-dark border mr-3"></div>
+              Dark
+            </div>
+            <p class="settings-heading mt-2">HEADER SKINS</p>
+            <div class="color-tiles mx-0 px-4">
+              <div class="tiles success"></div>
+              <div class="tiles warning"></div>
+              <div class="tiles danger"></div>
+              <div class="tiles primary"></div>
+              <div class="tiles info"></div>
+              <div class="tiles dark"></div>
+              <div class="tiles default border"></div>
+            </div>
+          </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item mt-5 my-3">
+              <a class="nav-link" href="index.html">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title">Dashboard <span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="addstudent.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Add Students</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="viewstudent.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">View Students</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="addscho.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Add Scholarships</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="viewscho.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">View Scholarships</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="indscho.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Individual Scholarship</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="notification.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Notifications</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="uploadDocument.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Upload Document</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="nodues.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">No Dues</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="col-12 grid-margin">
+                <div class="container mt-3" id="content-wrapper">
+                    <!-- Search Section -->
+                    <div class="input-group mb-3">
+                      <input
+                        id="SearchBar"
+                        type="text"
+                        class="form-control mr-3"
+                        placeholder="Enter registration id"
+                        aria-label="Recipient's username"
+                        aria-describedby="basic-addon2"
+                      />
+                      <button
+                      id="SearchBtn"
+                      class="btn btn-outline-primary ml-1"
+                      type="button"
+                    >
+                      Search
+                    </button>
+                    </div>
+              
+                    <table class="table table-bordered" id="table1">
+                      <thead>
+                        <th>Sno</th>
+                        <th>Academic Year</th>
+                        <th>Student Year</th>
+                        <th>Fees received from government</th>
+                        <th>Fees paid by student</th>
+                        <th>Total fees</th>
+                        <th>Dues</th>
+                        <th>Date</th>
+                      </thead>
+                      <tbody id="tbody1"></tbody>
+                    </table>
+                  </div>
+                  <div class="d-flex justify-content-center mt-5">
+                    <div class="col-md-12 grid-margin stretch-card d-flex align-items-center">
+                      <div class="card">
+                        <h2 class="card-title mt-5 text-center">ADD/UPDATE/DELETE NO DUE</h2>
+                        <div class="card-body col-md-12">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Registration ID</label>
+                                <div class="col-sm-9 mt-2">
+                                  <input
+                                  type="number"
+                                  class="form-control"
+                                  id="RegID"
+                                />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Financial Year</label>
+                                <div class="col-sm-9">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="Fyear"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Student Year</label>
+                                <div class="col-sm-9 mt-2">
+                                  <input
+                                  type="text"
+                                  class="form-control"
+                                  id="Syear"
+                                />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Total Fees</label>
+                                <div class="col-sm-9">
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Tfees"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Fees paid by government</label>
+                                <div class="col-sm-9 mt-2">
+                                  <input
+                                  type="number"
+                                  class="form-control"
+                                  id="Gfees"
+                                />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Fees paid by student</label>
+                                <div class="col-sm-9">
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Sfees"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Date</label>
+                                <div class="col-sm-9">
+                                  <input
+                                    type="date"
+                                    class="form-control"
+                                    id="Sdate"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-center mt-5">
+                          <button id = "Insbtn"  class="btn btn-primary mr-2">Add</button>
+                          <button id = "Selbtn" class="btn btn-primary mr-2">Get</button>
+                          <button id = "Updbtn"  class="btn btn-primary mr-2">Update</button>
+                          <button id = "Delbtn"  class="btn btn-primary mr-2">Delete</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+               </div>
+            </div>
+          </div>
+          <!-- partial -->
+        </div>
+      </div>
+    </div>
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="js/dashboard.js"></script>
+    <script type="module">
+      var stdNo = 0;
+      var schList = [];
+      var tbody = document.getElementById("tbody1");
+      const isEmpty = document.querySelectorAll("#table1 tr").length <= 1;
+      if(isEmpty){
+        const para = document.createElement("p");
+        const node = document.createTextNode('No data');
+        para.setAttribute('id','para-1');
+        para.appendChild(node);
+        var cont = document.getElementById("content-wrapper");
+        cont.appendChild(para);
+        cont.style.textAlign = "center";
+        
+      }
+      else if(!isEmpty){
+        document.getElementById("para-1").outerHTML='';
+
+      }
+      function AddItemToTable(fyear,syear,fgov,fstu,ftotal,dues,date) {
+        let trow = document.createElement("tr");
+        let td1 = document.createElement("td"); // to create cells
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+        let td5 = document.createElement("td");
+        let td6 = document.createElement("td");
+        let td7 = document.createElement("td");
+        let td8 = document.createElement("td");
+
+        schList.push([fyear,syear,fgov,fstu,ftotal,dues,date]);
+        console.log(schList);
+
+        td1.innerHTML = ++stdNo;
+        td2.innerHTML = fyear;
+        td3.innerHTML = syear;
+        td4.innerHTML = fgov;
+        td5.innerHTML = fstu;
+        td6.innerHTML = ftotal;
+        td7.innerHTML = dues;
+        td8.innerHTML = date;
+
+        trow.appendChild(td1);
+        trow.appendChild(td2);
+        trow.appendChild(td3);
+        trow.appendChild(td4);
+        trow.appendChild(td5);
+        trow.appendChild(td6);
+        trow.appendChild(td7);
+        trow.appendChild(td8);
+
+        tbody.appendChild(trow);
+      }
+
+      function AddAllItemsToTable(TheStudent) {
+        stdNo = 0;
+        tbody.innerHTML = "";
+        document.getElementById("para-1").outerHTML='';
+        TheStudent.forEach((element) => {
+          AddItemToTable(
+            element.financialYear,
+            element.studentYear,
+            element.feesgov,
+            element.feestudent,
+            element.feestotal,
+            element.dues,
+            element.Sdate
+          );
+        });
+
+      }
+  
+        // Imports and Configuration
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyBOhM_28cm1q1nKJEneftxSZUdCkpiRnyg",
+          authDomain: "sanket-9dd56.firebaseapp.com",
+          databaseURL: "https://sanket-9dd56-default-rtdb.firebaseio.com",
+          projectId: "sanket-9dd56",
+          storageBucket: "sanket-9dd56.appspot.com",
+          messagingSenderId: "14485262054",
+          appId: "1:14485262054:web:0c3e0af65ee9699b037527",
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+  
+        import {
+          getFirestore,
+          doc,
+          getDoc,
+          getDocs,
+          onSnapshot,
+          collection,
+          query,
+          setDoc,updateDoc,deleteDoc
+        } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js";
+  
+        const db = getFirestore();
+  
+
+        async function getUID(RegId) {
+          const querySnapshot = await getDocs(collection(db, "student"));
+  
+          var scholarships = [];
+          const data=querySnapshot.docs.map((doc) => ({
+            ...doc.data(),id:doc.id,
+        }));
+        console.log(data)
+        var id;
+          data.map(async (e)=>{
+            if(e.registrationID==RegId){
+             id=e.uid;
+            }
+          })
+          const raf=await getDocs(collection(db,`student/${id}/nodues`))
+            const d=raf.docs.map((doc) => ({
+                ...doc.data(),id:doc.id,
+            }));
+            console.log(d)
+            AddAllItemsToTable(d)
+        }
+  
+  
+        var SearchBar = document.getElementById("SearchBar");
+        var searchBtn = document.getElementById("SearchBtn");
+        
+  
+        function SearchTable() {
+          var filter = SearchBar.value;
+          console.log(filter);
+          getUID(filter)
+          
+        }
+  
+        searchBtn.onclick = function () {
+          SearchTable();
+        };
+  
+        SearchBar.onkeypress = function (event) {
+          if (event.keyCode == 13) {
+            if(document.getElementById("para-1").outerHTML='No data'){
+              document.getElementById("para-1").outerHTML=''
+            }
+            searchBtn.click();
+          }
+        };
+
+            let IDBox = document.getElementById("RegID")
+            let GFeebox = document.getElementById("Gfees")
+            let TFeeBox = document.getElementById("Tfees")
+            let SFeeBox = document.getElementById("Sfees")
+            let FYearBox = document.getElementById("Fyear")
+            let SYearBox = document.getElementById("Syear")
+            let SdateBox = document.getElementById("Sdate")
+
+
+            let insBtn = document.getElementById("Insbtn")
+            let selBtn = document.getElementById("Selbtn")
+            let updBtn = document.getElementById("Updbtn")
+            let delBtn = document.getElementById("Delbtn")
+
+            // Add document to firestore
+
+            async function AddDocument(){
+              const querySnapshot = await getDocs(collection(db, "student"));
+  
+              var scholarships = [];
+              const data=querySnapshot.docs.map((doc) => ({
+                ...doc.data(),id:doc.id,
+            }));
+            console.log(data)
+            var id=IDBox.value;
+            var u;
+                      data.map(async (e)=>{
+                if(e.registrationID==id){
+                 u=e.uid;
+                }
+              })
+              console.log(u);
+              var id=IDBox.value;
+              console.log(id);
+              var studentYear=SYearBox.value.toUpperCase();
+              console.log(studentYear);
+                    var ref = doc(db, `student/${u}/nodues/`,studentYear);
+                    const docRef = await setDoc(
+                        ref, {
+                            feesgov:GFeebox.value,
+                            feestotal: TFeeBox.value,
+                            feestudent: SFeeBox.value,
+                            financialYear: FYearBox.value,
+                            studentYear:SYearBox.value,
+                            dues:TFeeBox.value-GFeebox.value-SFeeBox.value,
+                            Sdate:SdateBox.value
+                        }
+                    )
+                    .then(()=>{
+                      alert("Data Added Successfully!")
+                      var id=IDBox.value;
+                      IDBox.value=" ";
+                      GFeebox.value = " ";
+                      TFeeBox.value = " ";
+                      SFeeBox.value = " ";
+                      FYearBox.value=" ";
+                      SYearBox.value = " ";
+                      SdateBox.value="";
+                      getUID(id)
+                    })
+                   .catch((error)=>{
+                        alert("Unsuccessful operation" + error);
+                    })
+            } 
+
+            // Getting Documnet
+            async function GetADocument(){
+              const querySnapshot = await getDocs(collection(db, "student"));
+  
+          var scholarships = [];
+          const data=querySnapshot.docs.map((doc) => ({
+            ...doc.data(),id:doc.id,
+        }));
+        var id=IDBox.value;
+        var u;
+                  data.map(async (e)=>{
+            if(e.registrationID==id){
+             u=e.uid;
+            }
+          })
+          var id=IDBox.value;
+          console.log(id);
+          var studentYear=SYearBox.value.toUpperCase();
+          console.log(studentYear);
+                var ref = doc(db, `student/${u}/nodues/`,studentYear);
+                const docSnap = await getDoc(ref);
+                console.log(docSnap.data())
+
+                if(docSnap.exists()) {
+                  GFeebox.value = docSnap.data().feesgov;
+                  TFeeBox.value = docSnap.data().feestotal;
+                  SFeeBox.value = docSnap.data().feestudent;
+                  FYearBox.value = docSnap.data().financialYear;
+                  SYearBox.value = docSnap.data().studentYear;
+                  IDBox.value = id;
+                  SdateBox.value=docSnap.data().Sdate;
+                }else{
+                    alert("No such document!")
+                }
+            }
+
+
+            //Updating Data
+            async function UpdateFieldsInADocument(){
+              const querySnapshot = await getDocs(collection(db, "student"));
+  
+          var scholarships = [];
+          const data=querySnapshot.docs.map((doc) => ({
+            ...doc.data(),id:doc.id,
+        }));
+        console.log(data)
+        var id=IDBox.value;
+        var u;
+                  data.map(async (e)=>{
+            if(e.registrationID==id){
+             u=e.uid;
+            }
+          })
+          var id=IDBox.value;
+          console.log(id);
+          var studentYear=SYearBox.value.toUpperCase();
+          console.log(studentYear);
+                var ref = doc(db, `student/${u}/nodues/`,studentYear);
+
+                await updateDoc(
+                    ref, {
+                      feesgov: GFeebox.value,
+                      feestotal: TFeeBox.value,
+                      feestudent: SFeeBox.value ,
+                      financialYear: FYearBox.value,
+                      studentYear:SYearBox.value,
+                      Sdate:SdateBox.value,
+                      dues:TFeeBox.value-GFeebox.value-SFeeBox.value,
+                    }
+                )
+                .then(()=>{
+                    alert("Data Updated Successfully!")
+                    var id=IDBox.value;
+                    IDBox.value=" ";
+                      GFeebox.value = " ";
+                      TFeeBox.value = " ";
+                      SFeeBox.value = " ";
+                      FYearBox.value=" ";
+                      SYearBox.value = " ";
+                      SdateBox.value="";
+                      getUID(id);
+                })
+                .catch((error)=>{
+                    alert("Unsuccessful operation" + error);
+                })
+            }
+
+            // Deleting Doc
+
+            async function DeleteDocument(){
+              const querySnapshot = await getDocs(collection(db, "student"));
+  
+              var scholarships = [];
+              const data=querySnapshot.docs.map((doc) => ({
+                ...doc.data(),id:doc.id,
+            }));
+            console.log(data)
+            var id=IDBox.value;
+            var u;
+                      data.map(async (e)=>{
+                if(e.registrationID==id){
+                 u=e.uid;
+                }
+              })
+              var id=IDBox.value;
+              console.log(id);
+              var studentYear=SYearBox.value.toUpperCase();
+              console.log(studentYear);
+                    var ref = doc(db, `student/${u}/nodues/`,studentYear);
+                                    const docSnap = await getDoc(ref);
+                if(!docSnap.exists()){
+                    alert("Document does not exist!")
+                    return;
+                }
+
+                await deleteDoc(ref)
+                .then(()=>{
+                    alert("Data Deleted Successfully!")
+                    var filter = SearchBar.value;
+                    console.log(filter);
+                    getUID(filter)
+                })
+                .catch((error)=>{
+                    alert("Unsuccessful operation" + error);
+                })
+            }
+
+
+
+            // Assign Events to Btns
+            insBtn.addEventListener("click", AddDocument);
+            selBtn.addEventListener("click", GetADocument);
+            updBtn.addEventListener("click", UpdateFieldsInADocument);
+            delBtn.addEventListener("click", DeleteDocument);
+      </script>
+ </body>
+</html>

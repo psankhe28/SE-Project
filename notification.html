@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>VJTI Scholarship Admin</title>
+    <link rel="stylesheet" href="vendors/typicons.font/font/typicons.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="css/vertical-layout-light/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <style>
+      .center_div{
+        margin: 0 auto;
+        width:80%;
+    }     
+    #myimg {
+      height: 200px;
+      width: 200px;
+      border: 2px solid black;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.html" style="font-size:18px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VJTI Scholarship</a>
+          <a class="navbar-brand brand-logo-mini" href="index.html">VJTI</a>
+          <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex" type="button" data-toggle="minimize">
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+        <div
+          class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+        >
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a
+                class="nav-link dropdown-toggle pl-0 pr-0"
+                href="#"
+                data-toggle="dropdown"
+                id="profileDropdown"
+              >
+                <i class="typcn typcn-user-outline mr-0"></i>
+                <span class="nav-profile-name">Scholarship Admin</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="profileDropdown"
+              >
+                <a class="dropdown-item">
+                  <i class="typcn typcn-power text-primary"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+          <div id="settings-trigger">
+            <i class="typcn typcn-cog-outline"></i>
+          </div>
+          <div id="theme-settings" class="settings-panel">
+            <i class="settings-close typcn typcn-delete-outline"></i>
+            <p class="settings-heading">SIDEBAR SKINS</p>
+            <div class="sidebar-bg-options" id="sidebar-light-theme">
+              <div class="img-ss rounded-circle bg-light border mr-3"></div>
+              Light
+            </div>
+            <div class="sidebar-bg-options selected" id="sidebar-dark-theme">
+              <div class="img-ss rounded-circle bg-dark border mr-3"></div>
+              Dark
+            </div>
+            <p class="settings-heading mt-2">HEADER SKINS</p>
+            <div class="color-tiles mx-0 px-4">
+              <div class="tiles success"></div>
+              <div class="tiles warning"></div>
+              <div class="tiles danger"></div>
+              <div class="tiles primary"></div>
+              <div class="tiles info"></div>
+              <div class="tiles dark"></div>
+              <div class="tiles default border"></div>
+            </div>
+          </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item mt-5 my-3">
+              <a class="nav-link" href="index.html">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title">Dashboard <span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="addstudent.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Add Students</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="viewstudent.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">View Students</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="addscho.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Add Scholarships</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="viewscho.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">View Scholarships</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="indscho.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Individual Scholarship</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="notification.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Notifications</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="uploadDocument.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Upload Document</span>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link" href="nodues.html">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">No Dues</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="main-panel">
+          <div class="content-wrapper row d-flex justify-content-center">
+            <div class="col-md-8 grid-margin stretch-card d-flex align-items-center">
+              <div class="card">
+                <div class="card-body col-md-10">
+                  Image Name <input type="text" id="namebox" class="form-control" />
+                  <label id="extlab"></label><br /><br />
+                  <img id="myimg" /><label id="upProgress"></label><br /><br />
+                  <button id="select"  class="btn btn-primary mr-2">Select</button>
+                  <button id="upload"  class="btn btn-primary mr-2">Upload</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  
+      const firebaseConfig = {
+        apiKey: "AIzaSyBOhM_28cm1q1nKJEneftxSZUdCkpiRnyg",
+        authDomain: "sanket-9dd56.firebaseapp.com",
+        databaseURL: "https://sanket-9dd56-default-rtdb.firebaseio.com",
+        projectId: "sanket-9dd56",
+        storageBucket: "sanket-9dd56.appspot.com",
+        messagingSenderId: "14485262054",
+        appId: "1:14485262054:web:0c3e0af65ee9699b037527",
+      };
+  
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+  
+      import {
+        getStorage,
+        ref as sRef,
+        uploadBytesResumable,
+        getDownloadURL,
+      } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
+  
+      var files = [];
+      var reader = new FileReader();
+  
+      var namebox = document.getElementById("namebox");
+      var extlab = document.getElementById("extlab");
+      var myimg = document.getElementById("myimg");
+      var proglab = document.getElementById("upprogress");
+      var SelBtn = document.getElementById("select");
+      var UpBtn = document.getElementById("upload");
+      var DownBtn = document.getElementById("delete");
+  
+      var input = document.createElement("input");
+      input.type = "file";
+      input.onchange = (e) => {
+        files = e.target.files;
+        var extention = GetFileExt(files[0]);
+        var name = GetFileName(files[0]);
+        console.log(extention);
+  
+        namebox.value = extention;
+        extlab.innerText = name;
+  
+        reader.readAsDataURL(files[0]);
+      };
+  
+      reader.onload = function () {
+        myimg.src = reader.result;
+      };
+  
+      SelBtn.onclick = function () {
+        input.click();
+      };
+  
+      function GetFileExt(file) {
+        var temp = file.name.split(".");
+        var fname = temp.slice(0, -1).join(".");
+        return fname;
+      }
+  
+      function GetFileName(file) {
+        var temp = file.name.split(".");
+        var ext = temp.slice(temp.length - 1, temp.length);
+        return "." + ext[0];
+      }
+  
+      async function upload() {
+        var ImgToUpload = files[0];
+        var imgName = namebox.value;
+        const metadata = {
+          contentType: "image/jpeg",
+        };
+        console.log(imgName);
+  
+        const storage = getStorage();
+  
+        var storageRef = sRef(storage,'notification/'+imgName);
+  
+        var uploadTask = uploadBytesResumable(storageRef, ImgToUpload, metadata);
+  
+        uploadTask.on(
+          "state_changed",
+          function (snapshot) {
+            const progress =
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log("Upload is " + progress + "% done");
+            proglab.innerHTML = "Upload" + progress + "%";
+          },
+          (error) => {
+            alert("error: img not uploaded");
+          },
+          () => {
+            // Upload completed successfully, now we can get the download URL
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+              console.log("File available at", downloadURL);
+            });
+            window.location.reload();
+          }
+        );
+      }
+      UpBtn.addEventListener("click", upload);
+    </script>
+  </body>
+</html>
